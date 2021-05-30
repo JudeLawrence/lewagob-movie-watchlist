@@ -13,16 +13,13 @@ movies_serialized = URI.open(url).read
 movies_json = JSON.parse(movies_serialized)
 movies = movies_json['results']
 
+Movie.delete_all if Rails.env.development?
+
 movies.each do |movie|
   Movie.create(
     title: movie['original_title'],
     overview: movie['overview'],
-    poster_url: "https://image.tmdb.org/t/p/w500/#{movie['poster_path']}",
+    poster_url: "https://image.tmdb.org/t/p/w500#{movie['poster_path']}",
     rating: movie['vote_average']
   )
 end
-
-# t.string "title"
-# t.string "overview"
-# t.string "poster_url"
-# t.integer "rating"
