@@ -23,3 +23,20 @@ movies.each do |movie|
     rating: movie['vote_average']
   )
 end
+
+List.delete_all if Rails.env.development?
+
+List.create(
+  name: 'Comedy',
+  image_url: 'https://images.unsplash.com/photo-1527224857830-43a7acc85260?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80'
+)
+
+List.create(
+  name: 'Horror',
+  image_url: 'https://images.unsplash.com/photo-1487174244970-cd18784bb4a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80'
+)
+
+List.create(
+  name: 'Sci-Fi',
+  image_url: 'https://images.unsplash.com/photo-1543083115-638c32cd3d58?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80'
+)

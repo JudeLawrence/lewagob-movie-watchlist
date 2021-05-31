@@ -1,4 +1,7 @@
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name, label: 'List Name', error: 'List name is mandatory, please specify one' %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container mt-5">
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name, label: 'List Name', error: 'List name is mandatory, please specify one' %>
+    <%= f.input :image_url, label: 'Main Image URL', error: 'Image URLis mandatory, please specify one' %>
+    <%= f.button :submit, class: 'btn - btn-primary'%>
+  <% end %>
+</div>

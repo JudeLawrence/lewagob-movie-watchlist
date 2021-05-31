@@ -1,9 +1,26 @@
-<h1>Lists</h1>
+<div class="banner">
+  <div class="titles pt-5">
 
-<div class="list-grid">
-  <% @lists.each do |list| %>
-    <div class="list-card">
-      <%= list.name %>
+    <div class="banner-content">
+      <h1>Save any kind of movies</h1>
+      <h2 id="banner-typed-text"></h2>
     </div>
-  <% end %>
+
+  </div>
+</div>
+
+<div class="container py-3">
+
+  <%= link_to 'Create New List', new_list_path, class: 'btn btn-primary'%>
+
+  <div class="list-grid mt-3">
+    <% @lists.each do |list| %>
+
+      <%= link_to list_path(list), :action => 'go' do %>
+        <div class="list-card" style="background-image: url(<%= list.image_url %>)">
+          <%= list.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>

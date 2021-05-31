@@ -1,1 +1,46 @@
 // Specific CSS for your home-page
+.banner {
+  background-image: asset-url('assets/movie-thearter-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  position: relative;
+
+
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-around;
+    height: 400px;
+  }
+
+  color: #eee;
+
+  .num-of-movies {
+    position: absolute;
+    top: 24px;
+    right: 0;
+
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #cc8f02;
+  }
+}
+
+.titles {
+  // background-color: ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
